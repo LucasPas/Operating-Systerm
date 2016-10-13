@@ -27,12 +27,16 @@ function App(n,m,s){
     this.Close = function(){
       if(this.State != null){
         this.Memory = 0;
+        this.State = null;
       }
     }
 }
 //Use the constructor to create 4 App objects below.
-
-
+var Spotify = new App("Spotify",50,"Active");
+var Word = new App("Word",200,"Sleep");
+var Calculator = new App("Calculator",15,null);
+var Messenger = new App("iMessage",300,"Active");
 
 //Declare an array named appList, and place all 4 of your apps in that array.
 //The order does not matter.
+var appList = [Spotify,Word,Calculator,Messenger];
